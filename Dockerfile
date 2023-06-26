@@ -1,11 +1,9 @@
 # FROM --platform=linux/amd64 python:3.9
 FROM python:3
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
 WORKDIR /code
 
 RUN pip install --upgrade pip
-RUN pip install Django
 
 # 依存パッケージをrequirements.txtに記述
 ADD requirements.txt /code/
